@@ -1,39 +1,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <header class="header-div">
   <a href="#" class="logo"><img src="assets\Images\Logo\logoNoBG_header.png" width="193px" height="56px"></a>
   <div class="navigation">
-    <ul class="menu">
+    <ul class="menu" *ngIf="closeNav">
+      <div class="close-btn" *ngIf="!hidingIcons">
+        <a href="#" (click)="closeNavigation()"><i class="fas fa-times"></i></a>
+      </div>
       <li class="menu-item"><a href="#">Accueil</a></li>
       <li class="menu-item">
-        <a class="sub-btn" href="#">A propos de moi <i class="fas fa-angle-down"></i></a>
-        <ul class="sub-menu">
+        <a class="sub-btn" href="#" (click)="toggleMenuMoreInfo()">A propos de moi <i class="fas fa-angle-down"></i></a>
+        <ul class="sub-menu" *ngIf="isMoreInfoMenuOpened">
           <li class="sub-item"><a href="#">Qui suis-je ?</a></li>
           <li class="sub-item more">
-            <a href="#">Mon parcours <i class="fas fa-angle-right"></i></a>
-            <ul class="more-menu">
+            <a href="#" (click)="toggleMenus(0)">Mon parcours <i class="fas fa-angle-right"></i></a>
+            <ul class="more-menu" *ngIf="experiencesMenu">
               <li class="more-item"><a href="#">Mon parcours scolaire</a></li>
               <li class="more-item"><a href="#">Mon parcours professionnel</a></li>
             </ul>
           </li>
           <li class="sub-item more">
-            <a href="#">Mes compétences <i class="fas fa-angle-right"></i></a>
-            <ul class="more-menu">
+            <a href="#" (click)="toggleMenus(1)">Mes compétences <i class="fas fa-angle-right"></i></a>
+            <ul class="more-menu" *ngIf="competencesMenu">
               <li class="more-item"><a href="#">Mes compétences techniques</a></li>
               <li class="more-item"><a href="#">Mes compétences transversales</a></li>
             </ul>
           </li>
           <li class="sub-item more">
-            <a href="#">Mes certifications <i class="fas fa-angle-right"></i></a>
-            <ul class="more-menu">
+            <a href="#" (click)="toggleMenus(2)">Mes certifications <i class="fas fa-angle-right"></i></a>
+            <ul class="more-menu" *ngIf="certifsMenu">
               <li class="more-item"><a href="#">Certification 1</a></li>
               <li class="more-item"><a href="#">Certification 2</a></li>
               <li class="more-item"><a href="#">Certification 3</a></li>
             </ul>
           </li>
           <li class="sub-item more">
-            <a href="#">Mes formations <i class="fas fa-angle-right"></i></a>
-            <ul class="more-menu">
+            <a href="#" (click)="toggleMenus(3)">Mes formations <i class="fas fa-angle-right"></i></a>
+            <ul class="more-menu" *ngIf="formationsMenu">
               <li class="more-item"><a href="#">Formation 1</a></li>
               <li class="more-item"><a href="#">Formation 2</a></li>
               <li class="more-item"><a href="#">Formation 3</a></li>
@@ -42,8 +45,8 @@
         </ul>
       </li>
       <li class="menu-item">
-        <a href="#">Mes projets <i class="fas fa-angle-down"></i></a>
-        <ul class="sub-menu">
+        <a class="sub-btn" href="#" (click)="toggleMenuProjects()">Mes projets <i class="fas fa-angle-down"></i></a>
+        <ul class="sub-menu" *ngIf="isProjectMenuOpened">
           <li class="sub-item"><a href="#">Projet 1</a></li>
           <li class="sub-item"><a href="#">Projet 2</a></li>
           <li class="sub-item"><a href="#">Projet 3</a></li>
@@ -53,5 +56,9 @@
       <li class="menu-item"><a href="#">Me contacter</a></li>
       <li class="menu-item"><a href="#">Se connecter</a></li>
     </ul>
+    <div class="menu-btn" *ngIf="!hidingIcons">
+      <a href="#" (click)="openNavigation()"><i class="fas fa-bars"></i></a>
+    </div>
   </div>
 </header>
+
