@@ -4,7 +4,6 @@ $textColor: #fff;
 $hoverColor1: #c4b3ff;
 $hoverColor2: #7b69bb;
 
-
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ $hoverColor2: #7b69bb;
 }
 
 header{
-  z-index: 999;
+  z-index: 997;
   position: fixed;
   top: 0;
   left: 0;
@@ -200,6 +199,23 @@ header .navigation .menu{
     img{
       width: 279px;
       height: 84px;
+    }
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header .navigation .menu{
+    min-width: 100vw;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  header{
+    img{
+      width: 193px;
+      height: 56px;
     }
     padding: 15px 20px;
   }

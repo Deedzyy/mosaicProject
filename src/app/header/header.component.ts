@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { ComponentInteractionsService } from '../component-interactions.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
       this.hidingIcons = false;
     }
   }
+  constructor(public service: ComponentInteractionsService) {}
   ngOnInit(): void {
     if(window.innerWidth>1067){
       this.closeNav = true;

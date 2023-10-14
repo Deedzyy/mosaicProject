@@ -1,25 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomePageComponent
+    LoginComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      { path: 'homepage', component: HomePageComponent },
-      { path: '',   redirectTo: 'homepage', pathMatch: 'full' }
-    ])
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
