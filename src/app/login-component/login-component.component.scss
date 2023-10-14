@@ -97,14 +97,23 @@ $hoverColor2: #3946ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    align-content: center;
+    flex-direction: row;
+    background-color: $backgroundColor;
+    border: 0;
+    border-radius: 8px 8px 0px 0px;
     h1{
       font-size: 2em;
       color: $textColor;
-      background-color: $backgroundColor;
       padding: 15px 100px 10px 100px;
-      border: 0;
-      border-radius: 8px 8px 0px 0px;
+    }
+    a{
+      position: relative;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 1.5em;
+      color: white;
     }
   }
   .login-body{
