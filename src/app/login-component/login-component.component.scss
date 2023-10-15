@@ -1,12 +1,12 @@
-$primary: #113599;
-$secondary: #9aa9ff;
+$primary: #991111;
+$secondary: #ff9a9a;
 $white: whitesmoke;
 
 $textColor: #fff;
-$backgroundColor: #1f2136;
-$backgroundColor2:rgb(103, 111, 184);
-$hoverColor1: #2937f1;
-$hoverColor2: #3946ff;
+$backgroundColor: #361f1f;
+$backgroundColor2:rgb(184, 103, 103);
+$hoverColor1: #f12929;
+$hoverColor2: #ff3939;
 
 *{
   margin: 0;
@@ -72,7 +72,6 @@ $hoverColor2: #3946ff;
   border-width: 3px;
   border-image: linear-gradient(to right, $primary,$secondary);
   border-image-slice: 1;
-  background-color: rgba($color: $backgroundColor, $alpha: 0.25);
 }
 
 .form__field{
@@ -81,9 +80,7 @@ $hoverColor2: #3946ff;
 
 .login-frame{
   box-shadow: inset 0 0 100vw black;
-  margin: -8px 0 0 -8px;
   width: 100vw;
-  z-index: 999;
   position: fixed;
   display: flex;
   flex-direction: column;

@@ -10,20 +10,20 @@ import { ComponentInteractionsService } from '../component-interactions.service'
 export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event?: any) {
-    if(window.innerWidth>1067){
+    if(window.innerWidth>1190){
       this.closeNav = true;
       this.hidingIcons = true;
-    }else if(window.innerWidth<1067){
+    }else if(window.innerWidth<1190){
       this.closeNav = false;
       this.hidingIcons = false;
     }
   }
   constructor(public service: ComponentInteractionsService) {}
   ngOnInit(): void {
-    if(window.innerWidth>1067){
+    if(window.innerWidth>1190){
       this.closeNav = true;
       this.hidingIcons = true;
-    }else if(window.innerWidth<1067){
+    }else if(window.innerWidth<1190){
       this.closeNav = false;
       this.hidingIcons = false;
     }

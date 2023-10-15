@@ -1,8 +1,8 @@
-$backgroundColor: #1f2136;
+$backgroundColor: rgba(black, 0.8);
 $backgroundColor2: rgba(255, 255, 255, 0.1);
 $textColor: #fff;
-$hoverColor1: #c4b3ff;
-$hoverColor2: #7b69bb;
+$hoverColor1: #ffb3b3;
+$hoverColor2: #bb6969;
 
 *{
   margin: 0;
@@ -21,8 +21,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background: $backgroundColor;
-  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
-  padding: 0 100px;
+  padding: 0 40px;
   transition: 0.6s;
 }
 header .navigation{
@@ -119,7 +118,7 @@ header .navigation .menu{
   display: none;
 }
 
-@media screen and (max-width: 1067px) {
+@media screen and (max-width: 1190px) {
   header .navigation .menu{
     position: fixed;
     display: block;
@@ -194,30 +193,11 @@ header .navigation .menu{
     font-size: 2em;
     cursor: pointer;
   }
-
-  header{
-    img{
-      width: 279px;
-      height: 84px;
-    }
-    padding: 15px 20px;
-  }
 }
 
 @media screen and (max-width: 800px) {
   header .navigation .menu{
     min-width: 100vw;
-  }
-}
-
-
-@media screen and (max-width: 550px) {
-  header{
-    img{
-      width: 193px;
-      height: 56px;
-    }
-    padding: 15px 20px;
   }
 }
 

@@ -1,0 +1,182 @@
+$backgroundColor: #000000;
+$specialFontColor: rgb(158, 0, 0);
+
+@font-face {
+  font-family: Arcade;
+  src: url("../../assets/Fonts/karmatic_arcade/ka1.ttf");
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes wobble  {
+  0%  { -webkit-transform:  rotate(0deg); }
+  20%  { -webkit-transform:  rotate(10deg); }
+  50%  { -webkit-transform:  rotate(-10deg); }
+  100%  { -webkit-transform:  rotate(0deg); }
+}
+
+@keyframes wobble  {
+  0%  { transform:  rotate(0deg); }
+  20%  { transform:  rotate(10deg); }
+  50%  { transform:  rotate(-10deg); }
+  100%  { transform:  rotate(0deg); }
+}
+
+.wobble {
+  -webkit-animation: wobble 2s infinite;
+  animation: wobble 2s infinite;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "consolas", sans-serif;
+}
+
+.marge{
+  margin-left: 2em;
+}
+
+.page-table{
+  position: relative;
+  width: 100%;
+  .row{
+    position: relative;
+    height: 100vh;
+  }
+  .first{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../../assets/Images/Homepage/Background_image/background_image_2.jpg);
+    background
+    .introducing-div{
+      animation: 1s ease-out 0s 1 slideInLeft;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 5vw;
+      width: fit-content; height: fit-content;
+      color: #fff;
+      background-color: rgba($backgroundColor, 0.8);
+      width: 60%;
+      h3{
+        text-transform: uppercase;
+        animation: 1.6s ease-out 0s 1 slideInLeft;
+      }
+      h3 span ,p span{
+        font-family: Arcade;
+        color: $specialFontColor;
+      }
+      p{
+        animation: 2s ease-out 0s 1 slideInLeft;
+      }
+      h1{
+        animation: 1.3s ease-out 0s 1 slideInLeft;
+        width: fit-content;
+        margin: 50px 0px;
+        font-size: 2.5vw;
+        background-color: rgba($specialFontColor, 0.157);
+        color: $specialFontColor;
+        padding: 10px 20px;
+        border-radius: 12px;
+        span{
+          margin-right: 20px;
+        }
+      }
+      h3{
+        margin-bottom: 50px;
+        font-size: 1.5vw;
+      }
+      p{
+        text-align: justify;
+        font-size: 0.75vw;
+      }
+    }
+    .image-div{
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      img{
+        animation: 1s ease-out 0s 1 slideInRight;
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+  // .second{
+  //   position: relative;
+  //   height: 100vh;
+  //   div{
+  //     position: relative;
+  //     h1, p{
+  //       position: relative;
+  //     }
+  //   }
+  // }
+}
+
+@media screen and (max-width: 1000px) {
+  .page-table .first .introducing-div{
+    width: 100%;
+    h1{
+      font-size: 2.5vw;
+    }
+    h3{
+      font-size: 2vw;
+    }
+    p{
+      font-size: 1.5vw;
+    }
+  }
+  .page-table .first .image-div{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  *{
+    overflow-x: hidden;
+  }
+  .page-table .first .introducing-div{
+    width: 100%;
+    h1{
+      font-size: 4vw;
+    }
+    h3{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+  }
+}
