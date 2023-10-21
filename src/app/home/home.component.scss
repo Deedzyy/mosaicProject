@@ -77,7 +77,8 @@ $specialFontColor: rgb(158, 0, 0);
     display: flex;
     align-items: center;
     background-image: url(../../assets/Images/Homepage/Background_image/background_image_2.jpg);
-    background
+    background-size: cover;
+    background-repeat: no-repeat;
     .introducing-div{
       animation: 1s ease-out 0s 1 slideInLeft;
       position: relative;
@@ -91,7 +92,7 @@ $specialFontColor: rgb(158, 0, 0);
       width: 60%;
       h3{
         text-transform: uppercase;
-        animation: 1.6s ease-out 0s 1 slideInLeft;
+        animation: 1.4s ease-out 0s 1 slideInLeft;
       }
       h3 span ,p span{
         font-family: Arcade;
@@ -101,7 +102,7 @@ $specialFontColor: rgb(158, 0, 0);
         animation: 2s ease-out 0s 1 slideInLeft;
       }
       h1{
-        animation: 1.3s ease-out 0s 1 slideInLeft;
+        animation: 1.2s ease-out 0s 1 slideInLeft;
         width: fit-content;
         margin: 50px 0px;
         font-size: 2.5vw;
